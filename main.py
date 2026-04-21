@@ -1,4 +1,3 @@
-
 #---------------------------------------------------------------------
 #-------------------------Module 6 Assignment-------------------------
 #---------------------------------------------------------------------
@@ -22,9 +21,11 @@ class TaskManager:
 
     def view_tasks(self):
         """prints all the tasks in the tasks list."""
-        print("\n"+" Task List ".center(24, "="))
+        lines= "="*24
+        print(f"\n{lines}\n"+" Task List ".center(24, "=")+f"\n{lines}")
+
         if not self.tasks:
-            print("Task list is empty.")
+            print("Task list is empty.".center(24, " "))
 
         for idx,task in enumerate(self.tasks,start=1):
             print("\n"+f" Task {idx} ".center(24, "-"))

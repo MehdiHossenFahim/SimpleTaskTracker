@@ -20,9 +20,9 @@ class TaskManager:
         title = input("Enter Title: ")
         description = input("Enter Description: ")
         self.tasks.append({"title": title, "description": description})
+        self.save_tasks()
         print("Task added successfully!")
-        with open(f"tasks.json","w") as file:
-            json.dump(self.tasks, file, indent=4)
+
 
     def view_tasks(self):
         """prints all the tasks in the tasks list."""
